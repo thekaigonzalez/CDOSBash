@@ -14,7 +14,11 @@ int main()
    strcpy(sstr, "C:");
    strcat(sstr, dir);
    strcat(sstr, ">");
-   char* command = readline(sstr);
-   system(command);
+   char* command1 = readline(sstr);
+   char ssstr[500];
+   strcpy(ssstr, "eval \" ");
+   strcat(ssstr, command1);
+   strcat(ssstr, "\"");
+   system(ssstr);
   }
 }
